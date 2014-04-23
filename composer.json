@@ -1,0 +1,17 @@
+{
+    "name": "lighp/module-contact",
+    "description": "A simple contact page, which sends e-mails to the webmaster.",
+    "license": "GPLv3",
+    "version": "0.1.3",
+    "type":"lighp-module",
+    "authors": [
+        {
+            "name": "emersion",
+            "email": "contact@emersion.fr"
+        }
+    ],
+    "require": {
+        "lighp/composer-lighp-installers": "dev-master",
+        "lighp/lib-captcha": "dev-master"
+    }
+}

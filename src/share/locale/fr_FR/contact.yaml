@@ -1,0 +1,37 @@
+index:
+	title: 'Contact'
+	subtitle: - n'hésitez pas à me contacter !
+	description: 'Pour me contacter, remplissez le formulaire ci-dessous.'
+
+	success:
+		title: 'Mail envoy&eacute; !'
+		msg: 'Votre message a bien &eacute;t&eacute; envoy&eacute;, vous recevrez une r&eacute;ponse prochainement.'
+
+	error:
+		title: 'Erreur'
+		msg: 'Une erreur est survenue : {{error}}'
+
+	form:
+		name: 'Nom'
+		email: 'E-mail'
+		subject: 'Sujet'
+		message: 'Message'
+		captcha: 'Résultat'
+		captchaHelp: Ceci est un code de vérification pour éviter l'envoi d'e-mails non désirables.
+		submit: 'Valider'
+
+captcha:
+	numbers:
+		zero: zéro
+		one: un
+		two: deux
+		three: trois
+		four: quatre
+		five: cinq
+		six: six
+		seven: sept
+		height: huit
+		nine: neuf
+		ten: dix
+	howMuchIs: Combien font
+	plus: plus

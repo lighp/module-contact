@@ -1,0 +1,63 @@
+<div class="container">
+	<img src="img/contact/icon-medium.png" alt="" class="pull-right" />
+	<div class="page-header">
+		<h1>{{_.title}} <small>{{_.subtitle}}</small></h1>
+		<p class="lead">{{_.description}}</p>
+	</div>
+
+	{{#messageSent?}}
+		<div class="alert alert-block alert-success fade in">
+			<button type="button" class="close" data-dismiss="alert">×</button>
+			<h4>{{_.success.title}}</h4>
+			<p>{{_.success.msg}}</p>
+		</div>
+	{{/messageSent?}}
+
+	{{^messageSent?}}
+		{{#error}}
+			<div class="alert alert-block alert-error fade in">
+				<button type="button" class="close" data-dismiss="alert">×</button>
+				<h4>{{_.error.title}}</h4>
+				<p>{{#__}}error.msg{{/__}}</p>
+			</div>
+		{{/error}}
+
+		<form action="" method="post" class="form-horizontal">
+			<input type="hidden" name="captcha-id" value="{{captcha.id}}"/>
+
+			<div class="control-group">
+				<label class="control-label" for="inputName">{{_.form.name}}</label>
+				<div class="controls">
+					<input type="text" name="message-sender-name" id="inputName" placeholder="{{_.form.name}}" value="{{message.senderName}}" required/>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="inputEmail">{{_.form.email}}</label>
+				<div class="controls">
+					<input type="email" name="message-sender-email" id="inputEmail" placeholder="{{_.form.email}}" value="{{message.senderEmail}}" required/>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="inputSubject">{{_.form.subject}}</label>
+				<div class="controls">
+					<input type="text" name="message-subject" id="inputSubject" placeholder="{{_.form.subject}}" class="input-xlarge" value="{{message.subject}}"/>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="inputContent">{{_.form.message}}</label>
+				<div class="controls">
+					<textarea id="inputContent" name="message-content" placeholder="{{_.form.message}}" rows="10" cols="50" style="width: 100%;" required>{{message.content}}</textarea>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="inputCaptcha">{{captcha.question}}</label>
+				<div class="controls">
+					<input type="number" name="captcha-value" id="inputCaptcha" placeholder="{{_.form.captcha}}" class="input-small" required/><span class="help-inline"><span class="muted">{{_.form.captchaHelp}}</span></span>
+				</div>
+			</div>
+			<div class="form-actions">
+				<button type="submit" class="btn btn-primary">{{_.form.submit}}</button>
+			</div>
+		</form>
+	{{/messageSent?}}
+</div><!-- /.container -->
